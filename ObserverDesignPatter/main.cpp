@@ -7,12 +7,25 @@
 //
 
 #include <iostream>
+#include "NewsReader.h"
+#include "NewsStation.h"
+#include "NeighborReader.h"
 
 int main(int argc, const char * argv[])
 {
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    //create our newsStation. NOTE how I'm coding to the interface "subject", not to the implementation "newsStation"
+    Subject *newsStation=new NewsStation();
+    
+    //creating our newsReader class. When the constructor gets called, the newsReader class is register with the newsStation
+    Observer *newsReader=new NewsReader(newsStation);
+
+    //creating our neighborReader class. When the constructor gets called, the neighborReader class is register with the newsStation
+    Observer *neighborReader=new NeighborReader(newsStation);
+    
+    //the newsStation notifies all observers.
+    newsStation->notifyObserver();
+    
     return 0;
 }
 

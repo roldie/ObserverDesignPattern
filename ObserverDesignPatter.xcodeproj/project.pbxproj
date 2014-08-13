@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		037857EC1707792200C8CD1E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 037857EB1707792200C8CD1E /* main.cpp */; };
 		037857EE1707792200C8CD1E /* ObserverDesignPatter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 037857ED1707792200C8CD1E /* ObserverDesignPatter.1 */; };
+		037857F91707796400C8CD1E /* Subject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 037857F71707796400C8CD1E /* Subject.cpp */; };
+		037857FC170779DC00C8CD1E /* Observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 037857FA170779DC00C8CD1E /* Observer.cpp */; };
+		037857FF17077B4900C8CD1E /* NewsStation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 037857FD17077B4900C8CD1E /* NewsStation.cpp */; };
+		037858081707AC4300C8CD1E /* NewsReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 037858061707AC4300C8CD1E /* NewsReader.cpp */; };
+		0378580B1707AE1B00C8CD1E /* NeighborReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 037858091707AE1B00C8CD1E /* NeighborReader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +33,16 @@
 		037857E71707792200C8CD1E /* ObserverDesignPatter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObserverDesignPatter; sourceTree = BUILT_PRODUCTS_DIR; };
 		037857EB1707792200C8CD1E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		037857ED1707792200C8CD1E /* ObserverDesignPatter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ObserverDesignPatter.1; sourceTree = "<group>"; };
+		037857F71707796400C8CD1E /* Subject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Subject.cpp; sourceTree = "<group>"; };
+		037857F81707796400C8CD1E /* Subject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subject.h; sourceTree = "<group>"; };
+		037857FA170779DC00C8CD1E /* Observer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Observer.cpp; sourceTree = "<group>"; };
+		037857FB170779DC00C8CD1E /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
+		037857FD17077B4900C8CD1E /* NewsStation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NewsStation.cpp; sourceTree = "<group>"; };
+		037857FE17077B4900C8CD1E /* NewsStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsStation.h; sourceTree = "<group>"; };
+		037858061707AC4300C8CD1E /* NewsReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NewsReader.cpp; sourceTree = "<group>"; };
+		037858071707AC4300C8CD1E /* NewsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsReader.h; sourceTree = "<group>"; };
+		037858091707AE1B00C8CD1E /* NeighborReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeighborReader.cpp; sourceTree = "<group>"; };
+		0378580A1707AE1B00C8CD1E /* NeighborReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeighborReader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +75,44 @@
 		037857EA1707792200C8CD1E /* ObserverDesignPatter */ = {
 			isa = PBXGroup;
 			children = (
+				037858041707AC0D00C8CD1E /* Subscriber */,
+				037857F61707795300C8CD1E /* Interface */,
+				037857F41707793000C8CD1E /* Publisher */,
 				037857EB1707792200C8CD1E /* main.cpp */,
 				037857ED1707792200C8CD1E /* ObserverDesignPatter.1 */,
 			);
 			path = ObserverDesignPatter;
+			sourceTree = "<group>";
+		};
+		037857F41707793000C8CD1E /* Publisher */ = {
+			isa = PBXGroup;
+			children = (
+				037857FD17077B4900C8CD1E /* NewsStation.cpp */,
+				037857FE17077B4900C8CD1E /* NewsStation.h */,
+			);
+			name = Publisher;
+			sourceTree = "<group>";
+		};
+		037857F61707795300C8CD1E /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				037857F71707796400C8CD1E /* Subject.cpp */,
+				037857F81707796400C8CD1E /* Subject.h */,
+				037857FA170779DC00C8CD1E /* Observer.cpp */,
+				037857FB170779DC00C8CD1E /* Observer.h */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		037858041707AC0D00C8CD1E /* Subscriber */ = {
+			isa = PBXGroup;
+			children = (
+				037858061707AC4300C8CD1E /* NewsReader.cpp */,
+				037858071707AC4300C8CD1E /* NewsReader.h */,
+				037858091707AE1B00C8CD1E /* NeighborReader.cpp */,
+				0378580A1707AE1B00C8CD1E /* NeighborReader.h */,
+			);
+			name = Subscriber;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				037857EC1707792200C8CD1E /* main.cpp in Sources */,
+				037857F91707796400C8CD1E /* Subject.cpp in Sources */,
+				037857FC170779DC00C8CD1E /* Observer.cpp in Sources */,
+				037857FF17077B4900C8CD1E /* NewsStation.cpp in Sources */,
+				037858081707AC4300C8CD1E /* NewsReader.cpp in Sources */,
+				0378580B1707AE1B00C8CD1E /* NeighborReader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +262,7 @@
 				037857F31707792200C8CD1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
